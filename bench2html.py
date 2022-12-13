@@ -72,7 +72,7 @@ def main() -> None:
     print("<tr>")
     print(f"<th>rule</th>")
     for datafile in args.filenames:
-        print(f"<th style=\"border: 1px solid\">{datafile}</th>")
+        print(f"<th style=\"border: 1px solid\">{Path(datafile).name}</th>")
     print("</tr>")
     for key in key_ordered_set:
         print("<tr>")

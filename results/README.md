@@ -11,7 +11,7 @@ For example `0_init_hdd_all.txt` means:
 
 List of tested versions:
     - `0_init` - initial version
-    - `1_queryplan` - PR fix/performance1-queryplan (buggy version - no ORs)
+    - `1_queryplan` - PR fix/performance1-queryplan
 
 List of tested storage options:
     - `hdd`
