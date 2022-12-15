@@ -34,7 +34,7 @@ def main() -> None:
 
     for filename, lvalue in left.items():
         if filename not in right:
-            print(f"{filename}: missing in right")
+            #print(f"{filename}: missing in right")
             continue
         
         rvalue = right[filename]
