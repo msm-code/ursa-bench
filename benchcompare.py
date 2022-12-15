@@ -48,7 +48,7 @@ def main() -> None:
         lstats, rstats = lvalue.stats, rvalue.stats
         assert lstats is not None and rstats is not None
         diffs = ""
-        # for op in ["and", "or", "minof", "read", "file"]:
+        #for op in ["and", "or", "minof", "read", "file"]:
         for op in ["read", "file"]:
         # for op in ["file"]:
             if lstats[f"{op}_count"] != rstats[f"{op}_count"]:
