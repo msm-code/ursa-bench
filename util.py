@@ -13,6 +13,8 @@ class Statistics(TypedDict):
     or_milliseconds: int
     read_count: int
     read_milliseconds: int
+    uniq_read_count: Optional[int]
+    uniq_read_milliseconds: Optional[int]
     file_count: int
 
 

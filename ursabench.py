@@ -17,6 +17,8 @@ def get_statistics(data) -> Statistics:
         "or_milliseconds": data["counters"]["or"]["milliseconds"],
         "read_count": data["counters"]["read"]["count"],
         "read_milliseconds": data["counters"]["read"]["milliseconds"],
+        "uniq_read_count": data["counters"]["uniq_read"]["count"] if "uniq_read" in data["counters"] else None,
+        "uniq_read_milliseconds": data["counters"]["uniq_read"]["milliseconds"] if "uniq_read" in data["counters"] else None,
         "file_count": len(data["result"]["files"])
     }
 
