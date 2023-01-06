@@ -63,6 +63,7 @@ def measure_and_print(file: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="UrsaDB benchmark suite.")
     parser.add_argument("filenames", help="yar file to measure", nargs="+")
+    parser.add_argument("--url", "-u", help="ursadb api url", nargs="?", default="tcp://localhost:9281")
     args = parser.parse_args()
 
     for filename in args.filenames:

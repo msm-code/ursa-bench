@@ -49,16 +49,17 @@ def main() -> None:
         assert lstats is not None and rstats is not None
         diffs = ""
         #for op in ["and", "or", "minof", "read", "file"]:
-        for op in ["read", "file"]:
+        for op in ["read_count", "read_milliseconds", "file_count"]:
         # for op in ["file"]:
-            if lstats[f"{op}_count"] != rstats[f"{op}_count"]:
-                l = lstats[f"{op}_count"]
-                r = rstats[f"{op}_count"]
+            if lstats[op] != rstats[op]:
+                l = lstats[op]
+                r = rstats[op]
                 val = r - l
                 val = (r-l) / (l + 0.001)
                 diffs += f"{op}: {l} vs {r} ({val:%}) "
 
         if not diffs:
+            print(f"{filename}: no changes")
             continue
 
         print(f"{filename}: {diffs}")

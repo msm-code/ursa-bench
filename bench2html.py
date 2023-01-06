@@ -30,16 +30,13 @@ def get_style(prev: BenchmarkResult, next: BenchmarkResult) -> str:
     ps = prev.stats
 
     if ns["file_count"] != ps["file_count"]:
-        if ns["file_count"] < ps["file_count"]:
-            return "background-color: #88ff88;"
-        else:
-            return "background-color: #ff8888;"
+        return "background-color: #ff8888;"
 
     if ns["read_count"] != ps["read_count"]:
         if ns["read_count"] < ps["read_count"]:
             return "background-color: #88ff88;"
         else:
-            return "background-color: #ff8888;"
+            return "background-color: #ffff88;"
 
     return "background-color: #ffffff;"
 

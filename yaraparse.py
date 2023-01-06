@@ -44,7 +44,7 @@ class YaraParseError(Exception):
 
 
 class UrsaExpression:
-    """ Represents a single Ursadb SELECT expression body. In the future
+    """Represents a single Ursadb SELECT expression body. In the future
     this may be represented as an expression tree, for example.
 
     Examples of valid expressions are:
